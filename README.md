@@ -1,19 +1,35 @@
-# 💻 Dev Dotfiles by net-olz
+# Настройка окружения
 
-Привет! Это мои **личные Bash алиасы и функции**, которые ускоряют работу с:
+## Установка пакетов
 
-- 🐳 Docker / Docker Compose  
-- 🧰 Git  
-- 🐍 Python / UV  
-- 🖥 Системные команды Linux  
+1. Установите Homebrew, если он еще не установлен:
+    ```sh
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    ```
+2. Установите необходимые пакеты:
+    ```sh
+    brew install git zsh tmux
+    ```
 
-Репозиторий полностью переносимый — можно развернуть на любом сервере за пару команд.
+## Настройка Zsh
 
----
+1. Установите Oh My Zsh:
+    ```sh
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ```
+2. Переключите оболочку на zsh:
+    ```sh
+    chsh -s $(which zsh)
+    ```
 
-## 🌟 Быстрый старт
+## Настройка Tmux
 
-### 1️⃣ Клонируем репозиторий
+1. Создайте файл конфигурации Tmux:
+    ```sh
+    cp ~/.tmux.conf ~/.tmux.conf.bak
+    echo "set -g mouse on" >> ~/.tmux.conf
+    ```
 
-```bash
-git clone git@github.com:net-olz/dotfiles.git ~/.dotfiles
+## Дополнительная настройка
+
+Для более детальной настройки, пожалуйста, обращайтесь к [документации](https://example.com/docs).
