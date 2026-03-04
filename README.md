@@ -1,5 +1,7 @@
 # 💻 Dev Dotfiles by net-olz
 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?color=%2336BCF7&lines=Я+раздобай+кодю+как+могу.)](https://git.io/typing-svg)
+
 Привет! Это мои **личные Bash алиасы и функции**, которые ускоряют работу с:
 
 - 🐳 Docker / Docker Compose  
