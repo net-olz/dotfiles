@@ -1,0 +1,41 @@
+# ================================
+# DEV SHORTCUTS
+# ================================
+
+# ---- Docker Compose ----
+dc() {
+  docker compose "$@"
+}
+
+alias dcu='dc up -d'
+alias dcd='dc down'
+alias dcr='dc restart'
+alias dcl='dc logs -f'
+alias dce='dc exec'
+alias dcps='dc ps'
+
+# ---- Docker ----
+alias d='docker'
+alias di='docker images'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+
+# ---- Git ----
+alias g='git'
+alias gs='git status'
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push'
+alias gl='git pull'
+alias glog='git log --oneline --graph --decorate'
+
+# ---- UV ----
+alias v='uv'
+alias vr='uv run'
+alias va='uv add'
+alias vs='uv sync'
+
+# ---- System ----
+alias ll='ls -lah'
+alias ..='cd ..'
+alias ...='cd ../..'
