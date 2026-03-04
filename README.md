@@ -1,35 +1,41 @@
-# Настройка окружения
+# 💻 Dev Dotfiles by net-olz
 
-## Установка пакетов
+Привет! Это мои **личные Bash алиасы и функции**, которые ускоряют работу с:
 
-1. Установите Homebrew, если он еще не установлен:
-    ```sh
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-    ```
-2. Установите необходимые пакеты:
-    ```sh
-    brew install git zsh tmux
-    ```
+- 🐳 Docker / Docker Compose  
+- 🧰 Git  
+- 🐍 Python / UV  
+- 🖥 Системные команды Linux  
 
-## Настройка Zsh
+Репозиторий полностью переносимый — можно развернуть на любом сервере за пару команд.
 
-1. Установите Oh My Zsh:
-    ```sh
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-    ```
-2. Переключите оболочку на zsh:
-    ```sh
-    chsh -s $(which zsh)
-    ```
+---
 
-## Настройка Tmux
+## 🌟 Быстрый старт
 
-1. Создайте файл конфигурации Tmux:
-    ```sh
-    cp ~/.tmux.conf ~/.tmux.conf.bak
-    echo "set -g mouse on" >> ~/.tmux.conf
-    ```
+### 1️⃣ Клонируем репозиторий
 
-## Дополнительная настройка
+```bash
+git clone git@github.com:net-olz/dotfiles.git ~/.dotfiles
+```
 
-Для более детальной настройки, пожалуйста, обращайтесь к [документации](https://example.com/docs).
+### 2️⃣ Создаём символическую ссылку
+
+```bash
+ln -s ~/.dotfiles/bash_aliases_dev ~/.bash_aliases_dev
+```
+
+### 3️⃣ Подключаем в ~/.bashrc
+
+```bash
+# Load custom dev aliases
+if [ -f ~/.bash_aliases_dev ]; then
+    source ~/.bash_aliases_dev
+fi
+```
+
+### 4️⃣ Применяем изменения
+
+```bash
+source ~/.bashrc
+```
